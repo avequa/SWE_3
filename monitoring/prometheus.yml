@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s   # как часто забирать метрики
+
+scrape_configs:
+  - job_name: recsys-api
+    static_configs:
+      - targets: ["api:8000"]   # имя сервиса из docker-compose.yml
