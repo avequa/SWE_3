@@ -31,14 +31,13 @@ Advancing RecSys Benchmarking Practices* - 196 млн действий 2,7 мл�
 .
 ├── prepare_data.py       выборка из датасета - data/sample.parquet
 ├── recommenders.py       все методы рекомендаций
-├── evaluate.py           офлайн-сравнение методов
+├── evaluate.py           сравнение методов
 ├── app/main.py           API на FastAPI и метрики Prometheus
 ├── simulate.py           имитация покупателей для графиков
 ├── monitoring/           настройки Prometheus и дашборд Grafana
 ├── Dockerfile
 ├── docker-compose.yml    api :8001, Prometheus :9091, Grafana :3001
 ├── requirements.txt
-└── report/screenshots/   скриншоты для отчёта
 ```
 
 ## Запуск

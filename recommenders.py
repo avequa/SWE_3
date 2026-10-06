@@ -59,7 +59,6 @@ class Recommender:
         last_week = orders[orders["datetime"] >= week_ago]
         self.popular_items = (last_week.groupby("item_id")["user_id"].nunique()
                               .sort_values(ascending=False).index.tolist())
-а
         info = df.groupby("item_id").agg(category=("category_id", "first"), price=("price", "median"))
         self.item_price = info["price"].to_dict()
         top = buyers.rename("buyers").to_frame().join(info["category"]).sort_values("buyers", ascending=False)
